@@ -20,9 +20,8 @@ async function main() {
   await usdo.deployed();
   console.log("USDO deployed to:", usdo.address);
   
-  const chainId = (await ethers.provider.getNetwork()).chainId;
   const deployments = JSON.parse(readFileSync(outputFilePath, "utf-8"));
-  deployments[chainId] = usdo.address;
+  deployments[hre.network.name] = usdo.address;
   writeFileSync(outputFilePath, JSON.stringify(deployments, null, 2));
 }
 

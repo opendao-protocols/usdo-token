@@ -16,6 +16,10 @@ const config: HardhatUserConfig = {
       url: process.env["METIS_RPC"] || "https://andromeda.metis.io/?owner=1088",
       accounts: [process.env["PRIVATE_KEY"]],
     },
+    avalanche: {
+      url: process.env["AVALANCHE_RPC"] || "https://api.avax.network/ext/bc/C/rpc",
+      accounts: [process.env["PRIVATE_KEY"]],
+    },
   },
   etherscan: {
     apiKey: process.env["ETHERSCAN_API_KEY"],
