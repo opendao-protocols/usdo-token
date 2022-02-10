@@ -20,6 +20,10 @@ const config: HardhatUserConfig = {
       url: process.env["AVALANCHE_RPC"] || "https://api.avax.network/ext/bc/C/rpc",
       accounts: [process.env["PRIVATE_KEY"]],
     },
+    aurora: {
+      url: process.env["AURORA_RPC"] || "https://mainnet.aurora.dev/",
+      accounts: [process.env["PRIVATE_KEY"]],
+    },
   },
   etherscan: {
     apiKey: process.env["ETHERSCAN_API_KEY"],
